@@ -33,18 +33,6 @@ const initialState: ProductsState = {
   productDetails: null,
 }
 
-// Function to get details for a product id
-export const getProductById = (productId: number): ProductType | undefined => {
-  return products.find((product) => product.id === productId)
-}
-
-// Function to get products of a specific category only
-export const getProductsByCategory = (category: string): ProductType[] => {
-  return products.filter(
-    (product) => product.category.toLowerCase() === category.toLowerCase()
-  )
-}
-
 const productsSlice = createSlice({
   name: 'products',
   initialState,
